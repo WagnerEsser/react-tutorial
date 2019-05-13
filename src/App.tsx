@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Table from './Table'
 
 const App: React.FC = () => {
-  const initialState = {
+  const [state, setState] = useState({
     characters: [
       {
         name: 'Charlie',
@@ -21,14 +21,12 @@ const App: React.FC = () => {
         job: 'Bartender',
       },
     ]
-  }
+  })
+  const { characters } = state
 
   const removeCharacter = (index: any) => {
-    const [state, setState] = useState({})
-    const { characters } = initialState
-
     setState({
-      characters: characters.filter((character:any, i:any) => {
+      characters: characters.filter((character: any, i: any) => {
         return i !== index
       }),
     })
@@ -36,7 +34,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <Table characterData={initialState.characters} />
+      <Table characterData={state.characters} />
     </div>
   )
 }
