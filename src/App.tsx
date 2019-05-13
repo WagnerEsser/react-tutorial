@@ -22,9 +22,10 @@ const App: React.FC = () => {
       },
     ]
   })
-  const { characters } = state
 
   const removeCharacter = (index: any) => {
+    const { characters } = state
+
     setState({
       characters: characters.filter((character: any, i: any) => {
         return i !== index
@@ -34,7 +35,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <Table characterData={state.characters} />
+      <Table characterData={state.characters} removeCharacter={removeCharacter}/>
     </div>
   )
 }

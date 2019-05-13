@@ -3,12 +3,12 @@ import TableHeader from './TableHeader'
 import TableBody from './TableBody'
 
 const Table = (props: any) => {
-    const { characterData } = props
+    const { characterData,removeCharacter } = props
 
     return (
         <table>
             <TableHeader />
-            <TableBody characterData={characterData} />
+            <TableBody characterData={characterData} removeCharacter={removeCharacter} />
         </table>
     )
 }
