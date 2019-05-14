@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Table from './Table'
 import Form from './Form'
+import Api from './Api';
 
 interface Character {
   name: string
@@ -39,6 +40,11 @@ const App: React.FC = () => {
 
       <h3>Add New</h3>
       <Form handleSubmit={handleSubmit} />
+
+      <hr className="divider" />
+
+      <h3>API</h3>
+      <Api />
     </div>
   )
 }

@@ -19,14 +19,12 @@ const Form = (props: any) => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <label>Name</label>
-            <input
-                type="text"
-                onChange={handleChange('name')} />
-            <label>Job</label>
-            <input
-                type="text"
-                onChange={handleChange('job')} />
+            <label>Name </label><br />
+            <input value={state.name || ''} type="text" onChange={handleChange('name')} required /><br /><br />
+
+            <label>Job </label><br />
+            <input value={state.job || ''} type="text" onChange={handleChange('job')} /><br /><br />
+
             <input type="submit" value="Submit" />
         </form>
     );
