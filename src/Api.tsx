@@ -1,4 +1,5 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import gif from './assets/loading.gif'
 
 const Api: React.FC = () => {
     const [state, setState] = useState({
@@ -30,7 +31,7 @@ const Api: React.FC = () => {
                 <>
                     <ul> {result} </ul>
                 </>
-                : <p>Loading...</p>
+                : <img src={gif} />
             }
         </div>
     )

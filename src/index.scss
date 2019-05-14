@@ -11,9 +11,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 
-  // width: 500px;
+  text-align: center;
   background-color: azure;
   border-radius: 15px;
 
@@ -27,11 +26,17 @@ body {
   width: 100%;
 }
 
-.list-api ul {
-  list-style: none;
+.list-api {
+  img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  ul {
+    list-style: none;
 
-  li {
-    margin-bottom: 5px;
-    border-bottom: 1px solid rgb(226, 226, 226);
+    li {
+      margin-bottom: 5px;
+      border-bottom: 1px solid rgb(226, 226, 226);
+    }
   }
 }
