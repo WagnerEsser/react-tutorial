@@ -1,41 +1,44 @@
 import React, { useState } from 'react'
 import Table from './Table'
+import Form from './Form'
+
+interface Character {
+  name: string
+  job?: string
+}
+
+interface CharacterArray {
+  characters: Array<Character>
+}
 
 const App: React.FC = () => {
   const [state, setState] = useState({
-    characters: [
-      {
-        name: 'Charlie',
-        job: 'Janitor',
-      },
-      {
-        name: 'Mac',
-        job: 'Bouncer',
-      },
-      {
-        name: 'Dee',
-        job: 'Aspring actress',
-      },
-      {
-        name: 'Dennis',
-        job: 'Bartender',
-      },
-    ]
-  })
+    characters: []
+  } as CharacterArray)
 
-  const removeCharacter = (index: any) => {
+  const removeCharacter = (index: number) => {
     const { characters } = state
 
     setState({
-      characters: characters.filter((character: any, i: any) => {
-        return i !== index
-      }),
+      characters: characters.filter((character: any, i: any) => i !== index),
+    })
+  }
+
+  const handleSubmit = (character: Character) => {
+    setState({
+      characters: [...state.characters, character]
     })
   }
 
   return (
     <div className="container">
-      <Table characterData={state.characters} removeCharacter={removeCharacter}/>
+      <h1>React Tutorial</h1>
+      <p>Add a character with a name and a job to the table.</p>
+
+      <Table characterData={state.characters} removeCharacter={removeCharacter} />
+
+      <h3>Add New</h3>
+      <Form handleSubmit={handleSubmit} />
     </div>
   )
 }

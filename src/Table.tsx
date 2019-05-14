@@ -2,8 +2,9 @@ import React from 'react'
 import TableHeader from './TableHeader'
 import TableBody from './TableBody'
 
+
 const Table = (props: any) => {
-    const { characterData,removeCharacter } = props
+    const { characterData, removeCharacter } = props
 
     return (
         <table>
