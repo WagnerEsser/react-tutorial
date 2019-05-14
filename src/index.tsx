@@ -6,6 +6,7 @@ import App from './App';
 import Page from './Page'
 import About from './About'
 import Api from './Api';
+import PageNotFound from './404';
 
 ReactDOM.render((
     <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render((
             <Route path='/page/:parameter' component={Page} />
             <Route path='/api' component={Api} />
             <Route exact path='/about' component={About} />
+            <Route path='*' exact={true} component={PageNotFound} />
         </Switch>
     </BrowserRouter>
 ), document.getElementById('root'));
