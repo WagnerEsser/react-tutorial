@@ -1,6 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './index.scss';
 import App from './App';
+import Page from './Page'
+import About from './About'
+import Api from './Api';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render((
+    <BrowserRouter>
+        <Switch>
+            <Route exact path='/' component={App} />
+            <Route exact path='/page/' component={Page} />
+            <Route path='/page/:parameter' component={Page} />
+            <Route path='/api' component={Api} />
+            <Route exact path='/about' component={About} />
+        </Switch>
+    </BrowserRouter>
+), document.getElementById('root'));
