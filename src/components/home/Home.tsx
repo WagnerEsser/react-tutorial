@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Table from '../table/Table'
 import Form from '../form/Form'
 import './home.scss'
+import { withTranslation } from 'react-i18next';
 
 interface Character {
   name: string
@@ -12,7 +13,8 @@ interface CharacterArray {
   characters: Array<Character>
 }
 
-const Home: React.FC = () => {
+const Home: React.FC = ({ t }: any) => {
+
   const [state, setState] = useState({
     characters: []
   } as CharacterArray)
@@ -33,14 +35,14 @@ const Home: React.FC = () => {
 
   return (
     <div className="container">
-      <p>Add a character with a name and a job to the table.</p>
+      <p>{t('Add-character')}</p>
 
       <Table characterData={state.characters} removeCharacter={removeCharacter} />
 
-      <h3>Add New</h3>
+      <h3>{t('Add-new')}</h3>
       <Form handleSubmit={handleSubmit} />
     </div>
   )
 }
 
-export default Home
+export default withTranslation()(Home)

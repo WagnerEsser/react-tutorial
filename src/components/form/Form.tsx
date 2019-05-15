@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import './form.scss'
+import { useTranslation } from 'react-i18next'
 
 const Form = (props: any) => {
+    const { t } = useTranslation();
     const { handleSubmit } = props
     const [state, setState] = useState({ name: '', job: '' } as any)
 
@@ -20,13 +22,15 @@ const Form = (props: any) => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <label>Name </label><br />
+            <label>{t('Name')}</label><br />
             <input value={state.name || ''} type="text" onChange={handleChange('name')} required /><br /><br />
 
-            <label>Job </label><br />
+            <label>{t('Job')}</label><br />
             <input value={state.job || ''} type="text" onChange={handleChange('job')} /><br /><br />
 
-            <input type="submit" value="Submit" />
+            <button type="submit">
+                {t('Submit')}
+            </button>
         </form>
     );
 }

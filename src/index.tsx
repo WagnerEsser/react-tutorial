@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './index.scss';
 import Header from './components/header/Header';
-import PageNotFound from './components/page-not-found/404';
-import Home from './components/home/Home';
+import PageNotFound from './components/page-not-found/404'
+import Home from './components/home/Home'
 import Page from './components/page/Page'
-import Api from './components/api/Api';
+import Api from './components/api/Api'
 import About from './components/about/About'
-import Footer from './components/footer/Footer';
+import Footer from './components/footer/Footer'
+import './i18n'
 
 ReactDOM.render((
     <BrowserRouter>
