@@ -1,63 +1,22 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector"
-
-// the translations
-// (tip move them in a JSON file and import them)
-const resources = {
-    en: {
-        translation: {
-            "Home": "Home",
-            "Page": "Page",
-            "Page-param": "Page (with parameter)",
-            "About": "About",
-            "Add-character": "Add a character with a name and a job to the table.",
-            "Name": "Name",
-            "Job": "Job",
-            "Remove": "Remove",
-            "Add-new": "Register a new",
-            "Submit": "Register",
-            "Footer": "Footer",
-            "Delete": "Delete",
-            "Param-not-found": "Parameter not found",
-            "Parameter": "Parameter",
-            "Portuguese": "Portuguese",
-            "English": "English",
-            "Page-not-found": "Page not found"
-        }
-    },
-    pt: {
-        translation: {
-            "Home": "Início",
-            "Page": "Página",
-            "Page-param": "Página (com parâmetro)",
-            "About": "Sobre",
-            "Add-character": "Adicione um personagem com um nome e um emprego para a tabela",
-            "Name": "Nome",
-            "Job": "Cargo",
-            "Remove": "Remover",
-            "Add-new": "Registre um novo",
-            "Submit": "Registrar",
-            "Footer": "Rodapé",
-            "Delete": "Deletar",
-            "Param-not-found": "Parâmetro não encontrado",
-            "Parameter": "Parâmetro",
-            "Portuguese": "Português",
-            "English": "Inglês",
-            "Page-not-found": "Página não encontrada"
-        }
-    }
-};
+// import LanguageDetector from "i18next-browser-languagedetector"
+// import Backend from 'i18next-xhr-backend';
+import translations_en from './locales/en/translations.json'
+import translations_pt from './locales/pt/translations.json'
+import translations_es from './locales/es/translations.json'
 
 i18n
-    .use(LanguageDetector)
+    // .use(Backend)
+    // .use(LanguageDetector)
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
-        resources,
-        fallbackLng: "pt",
-
-        keySeparator: false, // we do not use keys in form messages.welcome
-
+        lng: 'en',  // language to use
+        resources: {
+            en: { translation: translations_en },
+            pt: { translation: translations_pt },
+            es: { translation: translations_es }
+        },
         interpolation: {
             escapeValue: false // react already safes from xss
         }
