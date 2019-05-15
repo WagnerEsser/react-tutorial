@@ -6,7 +6,6 @@ import i18n from '../../i18n';
 
 const Header: React.FC = () => {
     const { t } = useTranslation();
-    const Traduzir = (lng: string) => i18n.changeLanguage(lng);
 
     return (
         <header>
@@ -18,19 +17,19 @@ const Header: React.FC = () => {
                     <li><Link to='/page/1'>{t('Page-param')}</Link></li>
                     <li><Link to='/api'>API</Link></li>
                     <li><Link to='/about'>{t('About')}</Link></li>
-                    
+
                     <li className="nav-divider">
-                        <a onClick={() => Traduzir('pt')}>
+                        <a onClick={() => i18n.changeLanguage('pt')}>
                             <small>{t('Portuguese')}</small>
                         </a>
                     </li>
                     <li>
-                        <a onClick={() => Traduzir('en')}>
+                        <a onClick={() => i18n.changeLanguage('en')}>
                             <small>{t('English')}</small>
                         </a>
                     </li>
                     <li className="last-item">
-                        <a onClick={() => Traduzir('es')}>
+                        <a onClick={() => i18n.changeLanguage('es')}>
                             <small>{t('Spanish')}</small>
                         </a>
                     </li>
