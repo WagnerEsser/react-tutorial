@@ -1,0 +1,40 @@
+header {
+  text-align: center;
+  background-color: whitesmoke;
+  height: auto;
+
+  h1 {
+    margin: 0;
+    padding: 20px;
+    color: blue;
+  }
+
+  nav {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(168, 168, 168);
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+
+      li {
+        display: inline;
+        padding-right: 20px;
+
+        &.last-item {
+          padding-right: 0;
+        }
+
+        a {
+          color: gray;
+          text-decoration: none;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

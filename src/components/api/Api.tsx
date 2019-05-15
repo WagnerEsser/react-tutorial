@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import gif from './assets/loading.gif'
-import Header from './Header';
+import gif from '../../assets/loading.gif'
+import './api.scss'
 
 const Api: React.FC = () => {
     const [state, setState] = useState({
@@ -27,16 +27,13 @@ const Api: React.FC = () => {
     })
 
     return (
-        <div className="container">
-            <Header />
-            <div className="list-api">
-                {state.data.length !== 0 ?
-                    <>
-                        <ul> {result} </ul>
-                    </>
-                    : <img src={gif} alt="Loading..." />
-                }
-            </div>
+        <div className="container list-api">
+            {state.data.length !== 0 ?
+                <>
+                    <ul> {result} </ul>
+                </>
+                : <img src={gif} alt="Loading..." />
+            }
         </div>
     )
 }

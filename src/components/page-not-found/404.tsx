@@ -1,9 +1,8 @@
 import React from 'react'
-import Header from './Header';
+import './404.scss'
 
 const PageNotFound: React.FC = () => (
   <div className="container">
-    <Header />
     <p>Page not found!</p>
   </div>
 )

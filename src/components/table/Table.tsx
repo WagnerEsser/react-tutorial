@@ -1,13 +1,20 @@
 import React from 'react'
-import TableHeader from './TableHeader'
 import TableBody from './TableBody'
+import './table.scss'
 
 const Table = (props: any) => {
     const { characterData, removeCharacter } = props
 
     return (
         <table>
-            <TableHeader />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Job</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            
             <TableBody characterData={characterData} removeCharacter={removeCharacter} />
         </table>
     )

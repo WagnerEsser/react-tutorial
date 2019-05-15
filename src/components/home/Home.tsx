@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Table from './Table'
-import Form from './Form'
-import Header from './Header';
+import Table from '../table/Table'
+import Form from '../form/Form'
+import './home.scss'
 
 interface Character {
   name: string
@@ -12,7 +12,7 @@ interface CharacterArray {
   characters: Array<Character>
 }
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
   const [state, setState] = useState({
     characters: []
   } as CharacterArray)
@@ -33,8 +33,6 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <Header />
-
       <p>Add a character with a name and a job to the table.</p>
 
       <Table characterData={state.characters} removeCharacter={removeCharacter} />
@@ -45,4 +43,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+export default Home
