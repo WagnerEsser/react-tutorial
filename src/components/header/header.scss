@@ -29,10 +29,16 @@ header {
         a {
           color: gray;
           text-decoration: none;
+          cursor: pointer;
 
           &:hover {
             color: black;
           }
+        }
+
+        &.nav-divider {
+          border-left: 1px solid gray;
+          padding-left: 20px;
         }
       }
     }

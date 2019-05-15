@@ -21,6 +21,9 @@ const resources = {
             "Delete": "Delete",
             "Param-not-found": "Parameter not found",
             "Parameter": "Parameter",
+            "Portuguese": "Portuguese",
+            "English": "English",
+            "Page-not-found": "Page not found"
         }
     },
     pt: {
@@ -39,6 +42,9 @@ const resources = {
             "Delete": "Deletar",
             "Param-not-found": "Parâmetro não encontrado",
             "Parameter": "Parâmetro",
+            "Portuguese": "Português",
+            "English": "Inglês",
+            "Page-not-found": "Página não encontrada"
         }
     }
 };
