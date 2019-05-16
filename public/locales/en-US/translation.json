@@ -1,0 +1,27 @@
+{
+    "name": "English",
+    "common": {
+        "home": "Home",
+        "page": "Page",
+        "about": "About",
+        "name": "Nome",
+        "job": "Job",
+        "parameter": "Parameter",
+        "submit": "Register",
+        "remove": "Remove",
+        "delete": "Delete",
+        "footer": "Footer",
+        "portuguese": "Portuguese",
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "home": {
+        "add_character": "Add a character with a name and a job to the table",
+        "add_new": "Register a new"
+    },
+    "others": {
+        "page_param": "Page (with parameter)",
+        "page_not_found": "Page not found",
+        "param_not_found": "Parameter not found"
+    }
+}

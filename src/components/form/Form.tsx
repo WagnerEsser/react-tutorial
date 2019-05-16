@@ -22,14 +22,14 @@ const Form = (props: any) => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <label>{t('Name')}</label><br />
+            <label>{t('common.name')}</label><br />
             <input value={state.name || ''} type="text" onChange={handleChange('name')} required /><br /><br />
 
-            <label>{t('Job')}</label><br />
+            <label>{t('common.job')}</label><br />
             <input value={state.job || ''} type="text" onChange={handleChange('job')} /><br /><br />
 
             <button type="submit">
-                {t('Submit')}
+                {t('common.submit')}
             </button>
         </form>
     );

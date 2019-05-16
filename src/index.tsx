@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './index.scss';
@@ -12,16 +12,18 @@ import Footer from './components/footer/Footer'
 import './i18n'
 
 ReactDOM.render((
-    <BrowserRouter>
-        <Header />
-        <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/page/' component={Page} />
-            <Route path='/page/:parameter' component={Page} />
-            <Route path='/api' component={Api} />
-            <Route exact path='/about' component={About} />
-            <Route path='*' exact={true} component={PageNotFound} />
-        </Switch>
-        <Footer />
-    </BrowserRouter>
+    <Suspense fallback="loading...">
+        <BrowserRouter>
+            <Header />
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/page/' component={Page} />
+                <Route path='/page/:parameter' component={Page} />
+                <Route path='/api' component={Api} />
+                <Route exact path='/about' component={About} />
+                <Route path='*' exact={true} component={PageNotFound} />
+            </Switch>
+            <Footer />
+        </BrowserRouter>
+    </Suspense>
 ), document.getElementById('root'));

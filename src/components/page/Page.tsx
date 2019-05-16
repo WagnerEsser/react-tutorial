@@ -10,9 +10,9 @@ const Page: React.FC = (props: any) => {
     <div className="container">
       <div>
         {param ?
-          <p>{t('Page')} - {t('Parameter')}: {param}</p>
+          <p>{t('common.page')} - {t('common.parameter')}: {param}</p>
           :
-          <p>{t('Param-not-found')}</p>
+          <p>{t('others.param_not_found')}</p>
         }
       </div>
     </div>

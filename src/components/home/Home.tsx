@@ -35,11 +35,12 @@ const Home: React.FC = ({ t }: any) => {
 
   return (
     <div className="container">
-      <p>{t('Add-character')}</p>
+
+      <p>{t('home.add_character')}</p>
 
       <Table characterData={state.characters} removeCharacter={removeCharacter} />
 
-      <h3>{t('Add-new')}</h3>
+      <h3>{t('home.add_new')}</h3>
       <Form handleSubmit={handleSubmit} />
     </div>
   )

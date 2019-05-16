@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     const { t } = useTranslation();
     return (
         <footer>
-            <p>{t('Footer')}</p>
+            <p>{t('common.footer')}</p>
         </footer>
     )
 }

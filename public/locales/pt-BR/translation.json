@@ -1,0 +1,27 @@
+{
+    "name": "Português BR",
+    "common": {
+        "home": "Início",
+        "page": "Página",
+        "about": "Sobre",
+        "name": "Nome",
+        "job": "Cargo",
+        "parameter": "Parâmetro",
+        "submit": "Registrar",
+        "remove": "Remover",
+        "delete": "Deletar",
+        "footer": "Rodapé",
+        "portuguese": "Português",
+        "english": "Inglês",
+        "spanish": "Espanhol"
+    },
+    "home": {
+        "add_character": "Adicione um personagem com um nome e um emprego para a tabela",
+        "add_new": "Registre um novo"
+    },
+    "others": {
+        "page_param": "Página (com parâmetro)",
+        "page_not_found": "Página não encontrada",
+        "param_not_found": "Parâmetro não encontrado"
+    }
+}

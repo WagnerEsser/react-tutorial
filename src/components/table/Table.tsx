@@ -11,9 +11,9 @@ const Table = (props: any) => {
         <table>
             <thead>
                 <tr>
-                    <th>{t('Name')}</th>
-                    <th>{t('Job')}</th>
-                    <th>{t('Remove')}</th>
+                    <th>{t('common.name')}</th>
+                    <th>{t('common.job')}</th>
+                    <th>{t('common.remove')}</th>
                 </tr>
             </thead>
 

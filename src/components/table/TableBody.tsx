@@ -10,7 +10,7 @@ const TableBody = (props: any) => {
         <td>{row.name}</td>
         <td>{row.job || '---'}</td>
         <td>
-          <button onClick={() => props.removeCharacter(index)}>{t('Delete')}</button>
+          <button onClick={() => props.removeCharacter(index)}>{t('common.delete')}</button>
         </td>
       </tr>
     )

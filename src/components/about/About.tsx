@@ -7,7 +7,7 @@ const Page: React.FC = () => {
 
   return (
     <div className="container">
-      <p>{t('About')}</p>
+      <p>{t('common.about')}</p>
     </div>
   )
 }

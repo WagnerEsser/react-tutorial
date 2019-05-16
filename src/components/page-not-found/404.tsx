@@ -7,7 +7,7 @@ const PageNotFound: React.FC = () => {
 
   return (
     <div className="container">
-      <p>{t('Page-not-found')}</p>
+      <p>{t('others.page_not_found')}</p>
     </div>
   )
 }
